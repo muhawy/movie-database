@@ -162,14 +162,16 @@ const MovieDetails = () => {
       </div>
 
       <Modal show={showLoginModal} onClose={() => setShowLoginModal(false)}>
-        <h2 className='text-xl md:text-2xl text-black mb-4'>Login Required</h2>
-        <p className='text-black mb-4'>Please log in to do this action.</p>
-        <button
-          onClick={handleLogin}
-          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg'
-        >
-          Login with TMDB
-        </button>
+        <div className='flex flex-col justify-center'>
+          <h2 className='text-xl md:text-2xl text-black mb-4'>Login Required</h2>
+          <p className='text-black mb-4'>Please log in to do this action.</p>
+          <button
+            onClick={handleLogin}
+            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg'
+          >
+            Login with TMDB
+          </button>
+        </div>
       </Modal>
     </>
   );

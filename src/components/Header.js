@@ -72,24 +72,36 @@ const Header = () => {
         </nav>
       </div>
       <Modal show={showLoginModal} onClose={() => setShowLoginModal(false)}>
-        <h2 className='text-xl text-black mb-4'>Login Required</h2>
-        <p className='text-black mb-4'>Please log in to access this page.</p>
-        <button
-          onClick={handleLogin}
-          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg'
-        >
-          Login with TMDB
-        </button>
+        <div className='flex flex-col justify-center'>
+          <h2 className='text-xl text-black mb-4'>Login Required</h2>
+          <p className='text-black mb-4'>Please log in to access this page.</p>
+          <button
+            onClick={handleLogin}
+            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg'
+          >
+            Login with TMDB
+          </button>
+        </div>
       </Modal>
       <Modal show={showLogoutModal} onClose={() => setShowLogoutModal(false)}>
-        <h2 className='text-xl text-black mb-4'>Logout</h2>
-        <p className='text-black mb-4'>Are you sure want to logout?</p>
-        <button
-          onClick={handleLogout}
-          className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg'
-        >
-          Yes
-        </button>
+        <div className='flex flex-col justify-center'>
+          <h2 className='text-xl text-black mb-4'>Logout</h2>
+          <p className='text-black mb-4'>Are you sure want to logout?</p>
+          <div className='flex justify-center gap-4'>
+            <button
+              onClick={handleLogout}
+              className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-lg'
+            >
+              Yes
+            </button>
+            <button
+              onClick={() => setShowLogoutModal(false)}
+              className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-8 rounded-lg'
+            >
+              No
+            </button>
+          </div>
+        </div>
       </Modal>
     </header>
   );

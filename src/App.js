@@ -8,7 +8,6 @@ import MovieDetails from './components/Movie/MovieDetails';
 import Watchlist from './pages/Watchlist';
 import Favorites from './pages/Favorites';
 import SearchResults from './pages/SearchResults';
-import AuthCallback from './pages/AuthCallback';
 
 const App = () => {
   return (
@@ -22,8 +21,6 @@ const App = () => {
             <Route path='/watchlist' element={<Watchlist />} />
             <Route path='/favorites' element={<Favorites />} />
             <Route path='/search' element={<SearchResults />} />
-            <Route path='/auth/callback' component={<AuthCallback />} />
-            <Route path='/search' component={<SearchResults />} />
           </Routes>
         </div>
         <Footer />
